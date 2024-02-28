@@ -1,0 +1,193 @@
+<mxfile host="app.diagrams.net" modified="2024-02-28T05:47:30.343Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="ueRn5k5pzzLEk0huf_Jw" version="21.6.9" type="github">
+  <diagram name="Page-1" id="rWbPrZeXYkg2S9yukZnm">
+    <mxGraphModel dx="1306" dy="1327" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="500" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-101" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="110" y="-6" width="450" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6666;entryX=0.883;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="yCN5B6YSa0ID6TMN7S2j-22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="717" y="90" as="targetPoint" />
+            <mxPoint x="560" y="90" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="590" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" target="iy0Ou4NXABLs7Jsezcqc-106" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="150" as="sourcePoint" />
+            <mxPoint x="449.9999999999999" y="227.96800000000007" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="150" />
+              <mxPoint x="478" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yCN5B6YSa0ID6TMN7S2j-22" value="eComm Application Server&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;rotation=-90;" parent="1" vertex="1">
+          <mxGeometry x="560" y="204.17000000000002" width="418.19" height="91.65" as="geometry" />
+        </mxCell>
+        <mxCell id="yCN5B6YSa0ID6TMN7S2j-257" value="The Container Store&lt;br&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 15px; font-weight: normal; background-color: initial;&quot;&gt;Verifone Encryption&lt;/span&gt;&lt;/div&gt;&lt;font style=&quot;&quot;&gt;&lt;div style=&quot;line-height: 60%;&quot;&gt;&lt;span style=&quot;font-size: 12px; background-color: initial;&quot;&gt;Aug 2023&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=left;" parent="1" vertex="1">
+          <mxGeometry x="33.870000000000005" y="-142" width="296.13" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="_Al5h70Xd6TgYCLQN8tk-6" target="iy0Ou4NXABLs7Jsezcqc-106" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="451" y="179" />
+              <mxPoint x="450" y="179" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_Al5h70Xd6TgYCLQN8tk-6" value="Verifone.js" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;align=center;fillColor=#00188D;shape=mxgraph.azure.script_file" parent="1" vertex="1">
+          <mxGeometry x="422" y="77" width="57" height="60.64" as="geometry" />
+        </mxCell>
+        <mxCell id="j-Fg9ns_LLDGPDcodeEc-24" value="Encrypted Card" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;horizontal=1;" parent="1" vertex="1">
+          <mxGeometry x="559" y="260" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="j-Fg9ns_LLDGPDcodeEc-32" value="&lt;h1&gt;Verifone Payment Encryption Flow&amp;nbsp;&lt;/h1&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;ol&gt;&lt;li&gt;Load VerifoneJS Script in Browser DOM on Checkout/Wallet Page Load.&lt;/li&gt;&lt;li&gt;Obtain Verifone Encryption Key from the eComm Application Server.&lt;/li&gt;&lt;li&gt;Display Card Input Form for Customer&#39;s Card Details.&lt;/li&gt;&lt;li&gt;Send Raw Card Details (Number, Expiry, CVV) to Verifone Encryption Function for Encryption.&lt;/li&gt;&lt;li&gt;If Encryption Fails, log details to Splunk Server via Logger API and show error message on the client side.&lt;/li&gt;&lt;li&gt;For MVP send Raw PLCC Card Number to EComm Server for zipcode validation.&lt;/li&gt;&lt;li&gt;Order Details (excluding Card Info) in Order Data.&lt;/li&gt;&lt;li&gt;Submit Encrypted Card, Order Data, and PLCC Number (if applicable) to eComm Server.&lt;/li&gt;&lt;li&gt;If any submit errors occurs, it will be displayed to the user in Browser and logs it.&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 15px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="110" y="540" width="410" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-48" value="Verifone Encryption Key&lt;b&gt;&lt;br&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="562" y="122" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-207" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.296;entryY=0.58;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=oval;endFill=0;" parent="1" source="iy0Ou4NXABLs7Jsezcqc-106" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-106" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#000066&quot;&gt;Verifone Common Encryption Function&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=1;horizontal=1;strokeWidth=1;strokeColor=#000099;" parent="1" vertex="1">
+          <mxGeometry x="420" y="220" width="77" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-119" value="&lt;b&gt;Encryption Failure&lt;br&gt;&lt;/b&gt;Log Error Details to Splunk&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="558" y="48" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-123" value="&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#666666&quot; style=&quot;font-size: 14px;&quot;&gt;Customer Browser&lt;/font&gt;&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=left;" parent="1" vertex="1">
+          <mxGeometry x="130" width="130" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-13" value="&lt;b&gt;Gift Card Input&lt;/b&gt;&lt;br&gt;GC No&lt;br&gt;Pin" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="195" y="110" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="iy0Ou4NXABLs7Jsezcqc-128" target="iy0Ou4NXABLs7Jsezcqc-101" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="244" />
+              <mxPoint x="70" y="244" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-128" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="20" y="205" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-102" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=none;strokeColor=#0000FF;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="170" y="190" width="160" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-209" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=oval;endFill=0;" parent="1" source="iy0Ou4NXABLs7Jsezcqc-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="285" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="251" y="200" />
+              <mxPoint x="680" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-11" value="&lt;b&gt;PLCC Input&lt;/b&gt;&lt;br&gt;PLCC Number&lt;br&gt;Cvv" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="195.5" y="214" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-7" value="&lt;b&gt;CC Input&lt;/b&gt;&lt;br&gt;CC Number&lt;br&gt;Exp M/Y&lt;br&gt;Pin" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="193.07" y="295.82" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-105" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font color=&quot;#3333ff&quot; style=&quot;border-color: var(--border-color);&quot;&gt;Wallet Page&lt;/font&gt;&lt;/b&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="205.5" y="377" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-131" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.009;entryY=0.193;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;dashed=1;strokeColor=#0066CC;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="249" as="sourcePoint" />
+            <mxPoint x="419.307" y="249.08999999999992" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-132" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;dashed=1;strokeColor=#3333FF;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="313.66" as="sourcePoint" />
+            <mxPoint x="420" y="313.89813229571996" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-133" value="Raw&lt;br&gt;Card&lt;br&gt;Data" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;horizontal=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="250" width="50" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-208" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.491;entryY=0.907;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;endArrow=oval;endFill=0;" parent="1" source="iy0Ou4NXABLs7Jsezcqc-135" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-135" value="Order&lt;br&gt;Data" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="412.5" y="388" width="79.5" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-140" value="" style="endArrow=none;html=1;rounded=0;dashed=1;strokeWidth=2;strokeColor=#0066CC;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="370" as="sourcePoint" />
+            <mxPoint x="520" y="370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="520" y="370" />
+              <mxPoint x="520" y="450" />
+              <mxPoint x="331" y="450" />
+              <mxPoint x="150" y="450" />
+              <mxPoint x="150" y="250" />
+              <mxPoint x="150" y="90" />
+              <mxPoint x="250" y="90" />
+              <mxPoint x="350" y="90" />
+              <mxPoint x="350" y="210" />
+              <mxPoint x="350" y="370" />
+              <mxPoint x="390" y="370" />
+              <mxPoint x="430" y="370" />
+              <mxPoint x="480" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-144" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;&lt;font color=&quot;#004c99&quot; style=&quot;border-color: var(--border-color);&quot;&gt;Checkout Page&lt;/font&gt;&lt;/b&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="193.07" y="420" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-147" value="&lt;span&gt;Order Data&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;horizontal=1;fontStyle=0" parent="1" vertex="1">
+          <mxGeometry x="575" y="384" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-152" value="PLCC Number" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;horizontal=1;" parent="1" vertex="1">
+          <mxGeometry x="594" y="169.17000000000002" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-153" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="382.5" y="53" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-154" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="510" y="116" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-155" value="3" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="156.13" y="94.99999999999999" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-156" value="4" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="368" y="214" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-158" value="5" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="520" y="250" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-159" value="6" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="622" y="18" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-160" value="7" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="568" y="166" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-161" value="8" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="590" y="358" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-162" value="9" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="686" y="250" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="iy0Ou4NXABLs7Jsezcqc-211" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.416;entryY=-0.003;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="yCN5B6YSa0ID6TMN7S2j-22" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="683" y="285" as="sourcePoint" />
+            <mxPoint x="720" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
